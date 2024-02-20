@@ -1,0 +1,23 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: devfile-sample-zvwg
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: devfile-sample-zvwg
+    app.kubernetes.io/part-of: tkrw-pr712-0075-0043-app
+  name: devfile-sample-zvwgah6r
+spec:
+  path: /
+  port:
+    targetPort: 3001
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: devfile-sample-zvwg
+    weight: null
+status: {}
